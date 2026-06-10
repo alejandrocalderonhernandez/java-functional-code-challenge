@@ -55,7 +55,7 @@ src/main/java/
 
 ## Ejercicio 1 — Top K Endpoints
 
-**Dificultad:** Fácil
+**Dificultad:** Intermedio -  Avanzado
 **Origen:** Examen técnico estándar — aparece frecuentemente en entrevistas
 
 ### El problema
@@ -111,7 +111,7 @@ Paso 6 — colectar en lista
 
 ## Ejercicio 2 — Majority Element
 
-**Dificultad:** Fácil / Media
+**Dificultad:** Intermedio - Avanzado
 **Origen:** LeetCode problema 169 — clásico de entrevistas en FAANG
 
 ### El problema

@@ -4,10 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class TopKEndpoints {
+public class TopKEndpointsSaolution {
 
 
     /**
@@ -22,7 +21,15 @@ public class TopKEndpoints {
      *   resultado = ["/home", "/api"]
      */
     public List<String> getTopKEndpoints(String[] urls, int k) {
-        throw new UnsupportedOperationException("Not implemented yet");
-
+      return Arrays.stream(urls)
+                .collect(Collectors.groupingBy(
+                        Function.identity(),
+                        Collectors.counting()
+                ))
+              .entrySet().stream()
+              .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+              .limit(k)
+              .map(Map.Entry::getKey)
+              .toList();
     }
 }
